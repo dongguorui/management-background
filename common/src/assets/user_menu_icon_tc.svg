@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>退出登录</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="入口" transform="translate(-1483.000000, -119.000000)">
+            <g id="Group-6" transform="translate(1475.000000, 47.000000)">
+                <g id="退出登录" transform="translate(8.000000, 72.000000)">
+                    <rect id="矩形" x="0" y="0" width="14" height="14"></rect>
+                    <path d="M5.05166737,1.32341624 C2.69433298,2.13232377 1,4.36829555 1,7 C1,10.3137085 3.6862915,13 7,13 L7,13 C10.3137085,13 13,10.3137085 13,7 C13,4.38898443 11.332202,2.16750397 9.00380507,1.34275776" id="路径" stroke="#2E3233" stroke-linecap="round" fill-rule="nonzero"></path>
+                    <path d="M7,6 C6.62969498,6 6.32820771,5.75548173 6.32820771,5.4538206 L6.32820771,0.544850498 C6.32820771,0.244518272 6.62969498,0 7,0 C7.37194353,0 7.67179229,0.244518272 7.67179229,0.544850498 L7.67179229,5.45249169 C7.67179229,5.75548173 7.37194353,6 7,6 Z" id="路径" fill="#2E3233" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

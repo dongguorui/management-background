@@ -1,0 +1,167 @@
+.triangle_border_down {
+  position: relative;
+}
+.triangle_border_down::after {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  margin-top: -3px;
+  width: 0;
+  height: 0;
+  border-width: 6px 6px 0;
+  border-style: solid;
+  border-color: #fff transparent transparent; /*灰 透明 透明 */
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); /* Firefox 4 */
+  -webkit-transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); /* Safari 和 Chrome */
+  -o-transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); /* Opera */
+}
+.triangle_border_down.pop::after {
+  transform: rotate(180deg);
+}
+
+.logo_container {
+  position: absolute;
+  overflow: hidden;
+  opacity: 1;
+  top: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); /* Firefox 4 */
+  -webkit-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); /* Safari 和 Chrome */
+  -o-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); /* Opera */
+}
+.logo_container.big {
+  width: 180px;
+  height: 45px;
+  left: 10px;
+}
+.logo_container.small {
+  width: 45px;
+  height: 45px;
+  left: 2px;
+}
+.logo_container.logo_hide {
+  opacity: 0;
+}
+.header {
+  background-color: fade(@frame-color, 90%);
+  display: flex;
+  height: 60px;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10px 0 20px;
+  line-height: 60px;
+}
+.header a {
+  color: #fff;
+}
+.logo_title_container {
+  height: 90px;
+  width: 100%;
+  padding-top: 25px;
+  position: relative;
+  text-align: center;
+}
+.header-root {
+  position: relative;
+}
+.module-switch {
+  position: absolute;
+  top: 12px;
+}
+#menubar {
+  min-height: 100vh;
+  position: relative;
+}
+.menubar-real {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.menubar-content {
+  height: calc(100vh - 107px);
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &::-ms-scrollbar {
+    display: none;
+  }
+  &:-ms-scrollbar {
+    display: none;
+  }
+  &::-o-scrollbar {
+    display: none;
+  }
+  &::scrollbar {
+    display: none;
+  }
+  &:scrollbar {
+    display: none;
+  }
+}
+.base .menubar-content {
+  height: calc(100vh - 77px);
+}
+.content_container {
+  min-height: 100vh;
+}
+
+.menubar-trigger {
+  width: 16px;
+  height: 48px;
+  position: absolute;
+  top: 50vh;
+  margin-top: -24px;
+  cursor: pointer;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 999;
+}
+.menubar-trigger:hover {
+  transform: scale(1.1, 1.1);
+}
+.menubar-trigger.expends {
+  left: 49px;
+  box-sizing: content-box;
+  background-image: url(../assets/menu_zk.svg);
+  -webkit-clip-path: polygon(0 0, 100% 5px, 100% calc(100% - 5px), 0 100%);
+  clip-path: polygon(0 0, 100% 5px, 100% calc(100% - 5px), 0 100%);
+}
+.menubar-trigger.thrink {
+  left: 185px;
+  box-sizing: content-box;
+  background-image: url(../assets/menu_sq.svg);
+  -webkit-clip-path: polygon(
+    0px 5px,
+    100% 0px,
+    100% 100%,
+    0px calc(100% - 5px)
+  );
+  clip-path: polygon(0px 5px, 100% 0px, 100% 100%, 0px calc(100% - 5px));
+}
+
+.user-menu-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.user-menu-icon.quit {
+  background-image: url(../assets/user_menu_icon_tc.svg);
+}
+.devide-vertial {
+  display: inline-block;
+  height: 100%;
+  width: 1px;
+  margin-right: 20px;
+}

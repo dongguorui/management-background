@@ -1,0 +1,848 @@
+@content-width: 1020px;
+@sub_content_width: 312px;
+p {
+  margin: 0;
+}
+h2 {
+  font-size: @font-size-lg;
+}
+
+/* 下面是对分页控件的修改 */
+.ant-pagination-item,
+.ant-pagination-prev,
+.ant-pagination-next,
+.ant-pagination-jump-prev,
+.ant-pagination-jump-next {
+  min-width: 24px;
+  height: 24px;
+  line-height: 24px;
+}
+
+/* 下面是对列表控件的修改 */
+.ant-table-thead > tr > th {
+  font-weight: @text-bold;
+}
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td {
+  min-width: 60px;
+  max-width: 200px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+/*下面是对Popover控件的修改*/
+.ant-popover-inner-content {
+  padding: 0px;
+}
+/*因为对ant-popover-inner-content的修改需要增加下面的修改*/
+.ant-popover-buttons {
+  margin-left: 8px;
+  margin-right: 14px;
+  padding-bottom: 12px;
+  margin-bottom: 1px;
+}
+.ant-popover-message {
+  padding: 12px 12px 12px 12px;
+  min-width: 140px;
+}
+.ant-popover-message > .anticon {
+  top: 15px;
+}
+/*因为对ant-popover-inner-content的修改需要增加上面的修改*/
+.ant-popover-arrow {
+  border-color: #fff;
+}
+.ant-popover-placement-bottom > .ant-popover-content > .ant-popover-arrow {
+  top: 7px;
+}
+.ant-popover-placement-left > .ant-popover-content > .ant-popover-arrow {
+  right: 7px;
+}
+/* 对撑满屏幕的popover控件的修改**/
+.beibei-extend-popover .ant-popover-arrow {
+  background: none;
+  width: 0;
+  height: 0;
+  transform: none;
+  position: absolute;
+  display: block;
+  border: none;
+}
+
+/*下面是table的修改*/
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td {
+  padding: 16px 16px;
+}
+
+/* 下面是对Cascader的修改*/
+.ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled),
+.ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled):hover {
+  color: #fff;
+  font-weight: normal;
+}
+.ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled)
+  .ant-cascader-menu-item-expand-icon,
+.ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled):hover
+  .ant-cascader-menu-item-expand-icon {
+  color: #fff;
+}
+/* 下面对checkbox的修改*/
+.ant-checkbox-checked:after {
+  animation: none;
+  content: none;
+}
+/* 下面对radio的修改*/
+.ant-radio-checked:after {
+  content: none;
+  animation: none;
+}
+//为我们的toggle控件加样式
+.beibei-toggle .ant-radio-button-wrapper {
+  padding: 0 40px;
+  position: relative;
+}
+.beibei-toggle .ant-radio-button-wrapper-checked::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 2px;
+  left: 20px;
+  top: 50%;
+  background-color: @primary-color !important;
+  opacity: 1;
+  transform: rotate(45deg);
+}
+.beibei-toggle .ant-radio-button-wrapper-checked::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 20px;
+  top: 50%;
+  background-color: @primary-color !important;
+  opacity: 1;
+  transform: rotate(-45deg) translateX(4px) translateY(1px);
+}
+
+/* 下面是对input控件的修改 */
+.ant-input-affix-wrapper .ant-input:not(:first-child) {
+  padding-left: 36px;
+}
+/*密码输入框的icon*/
+.anticon.anticon-eye.ant-input-password-icon,
+.anticon.anticon-eye-invisible.ant-input-password-icon {
+  color: #999;
+}
+/*anchor的修改*/
+.ant-anchor-link {
+  padding: 10px 20px 10px 0px;
+  text-align: right;
+}
+.ant-anchor-ink {
+  position: absolute;
+  height: 100%;
+  left: auto;
+  top: 0px;
+  right: 10px;
+}
+
+/* 幽灵按钮 */
+.ant-btn-background-ghost[disabled] {
+  background-color: #ccd !important;
+}
+.ant-btn-background-ghost:not([disabled]):hover {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  color: #fff;
+  border-color: #fff;
+}
+.ant-btn-background-ghost:focus {
+  color: #fff;
+  border-color: #fff;
+}
+
+.ant-btn-background-ghost[ant-click-animating-without-extra-node='true']:after {
+  background-color: #fff;
+  opacity: 0.6;
+  animation: fadeEffect 2s cubic-bezier(0.08, 0.82, 0.17, 1);
+  z-index: 10;
+}
+
+/*下面是我们自己的样式*/
+.beibei-root {
+  min-height: 100vh;
+  width: 100vw;
+  min-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+.beibei-pc-center > div,
+.beibei-pc-center > h1,
+.beibei-pc-center > h2,
+.beibei-pc-center > h3,
+.beibei-pc-center > h4,
+.beibei-pc-center > h5,
+.beibei-pc-center > p {
+  max-width: 1200px;
+  margin: auto;
+}
+.beibei-center-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.beibei-frame-root-minwidth {
+  min-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.beibei-frame-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.beibei-frame-lineflow {
+  display: flex;
+  flex-direction: row;
+}
+.beibei-margin {
+  margin: @padding-1;
+}
+.beibei-margin-small-left {
+  margin-left: 10px;
+}
+.beibei-margin-small-top {
+  margin-top: 10px;
+}
+.beibei-margin-small-right {
+  margin-right: 10px;
+}
+.beibei-margin-small-bottom {
+  margin-bottom: 10px;
+}
+.beibei-margin-small {
+  margin: 10px;
+}
+.beibei-border {
+  background-color: #fff;
+  box-shadow: @default-box-shadow;
+}
+.beibei-border-title {
+  height: 46px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 @padding-1;
+  border-bottom: 1px solid #dde0e4;
+  align-items: center;
+}
+.beibei-border-title > div {
+  height: 46px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.beibei-border-title > div:first-child {
+  flex-grow: 1;
+}
+.beibei-border-title > div:first-child > h2 {
+  font-size: 16px;
+  font-weight: @text-bold;
+  margin: 0;
+  padding: 0;
+}
+.beibei-border-title > div > span {
+  height: 50px;
+  line-height: 50px;
+  font-size: 12px;
+  color: @text-color-secondary;
+  margin: 0;
+  padding: 0 10px;
+}
+.beibei-border-info-line {
+  display: flex;
+  flex-direction: row;
+  padding: 0 @padding-1;
+  margin: 5px 0;
+  justify-items: center;
+}
+.beibei-border-info-line > span:last-child {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+.beibei-padding {
+  padding: @padding-1;
+}
+.beibei-dot-text {
+  position: relative;
+  padding-left: 10px;
+}
+.beibei-dot-text::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  left: 0px;
+  top: 50%;
+  margin-top: -3px;
+}
+.beibei-boxshadow {
+  box-shadow: @default-box-shadow;
+}
+.beibei-special-text {
+  font-size: @font-size-lg;
+  color: @primary-color;
+}
+.beibei-warning-text {
+  color: @error-color;
+}
+.beibei-table-imgcontainer {
+  margin: -8px 0px;
+}
+.beibei-bottom-divideline {
+  border-bottom: 1px solid #dde0e4;
+}
+/*输入框状态*/
+.beibei-input-erro .ant-input:not(.ant-input-disabled),
+.beibei-input-erro:hover .ant-input:not(.ant-input-disabled),
+.beibei-input-erro:focus .ant-input:not(.ant-input-disabled) {
+  border-color: @error-color;
+}
+.beibei-jump {
+  padding-right: 20px;
+  position: relative;
+}
+.beibei-jump::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 9px;
+  top: 50%;
+  margin-top: -5px;
+  right: 0px;
+  -webkit-clip-path: polygon(0 0, 10px 5px, 0 9px, 0 0);
+  clip-path: polygon(0 0, 10px 5px, 0 9px, 0 0);
+}
+
+.beibei-require-label-right {
+  line-height: 3;
+}
+.beibei-require-label-right::after {
+  content: '*';
+  line-height: 1;
+  font-size: 14px;
+  color: #ff0000;
+  margin-left: 4px;
+}
+/*对formitem的label增加requir标*/
+.beibei-requir-check .ant-form-item-label label:before {
+  display: inline-block;
+  margin-right: 4px;
+  content: '*';
+  font-family: SimSun;
+  line-height: 1;
+  font-size: 14px;
+  color: @error-color;
+}
+
+.beibei-second-dec {
+  font-size: 12px;
+  color: @text-color-secondary;
+}
+.beibei-title-font {
+  font-size: @font-size-lg;
+  color: @text-color;
+}
+.beibei-statics-ratio-up {
+  font-size: 14px;
+  color: #00ad25;
+  padding-left: 20px;
+  font-size: @text-bold;
+  background: url(../common/src/assets/icon_ss.svg) left center no-repeat;
+}
+.beibei-statics-ratio-down {
+  font-size: 14px;
+  color: #ff0000;
+  padding-left: 20px;
+  font-size: @text-bold;
+  background: url(../common/src/assets/icon_xj.svg) left center no-repeat;
+}
+.beibei-empty {
+  background-image: url(../common/src/assets/bg_no_info1.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 180px;
+  min-width: 322px;
+}
+.beibei-empty-small {
+  background-image: url(../common/src/assets/no_data.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 64px;
+  min-width: 112px;
+}
+.beibei-search-result {
+  color: #ff5500;
+  padding-left: 12px;
+  margin: 0px;
+}
+//用于二级tab
+.beibei-sub-tabs {
+  padding-top: 10px;
+}
+
+//dongdong
+.beibei-tabs.ant-tabs-top > .ant-tabs-nav::before,
+.beibei-tabs.ant-tabs-bottom > .ant-tabs-nav::before,
+.beibei-tabs.ant-tabs-top > div > .ant-tabs-nav::before,
+.beibei-tabs.ant-tabs-bottom > div > .ant-tabs-nav::before {
+  border-bottom: none;
+}
+.beibei-sub-tabs .ant-tabs-nav-wrap {
+  text-align: center;
+  margin-bottom: 0;
+}
+.beibei-sub-tabs.beibei-left .ant-tabs-nav-wrap {
+  text-align: left;
+}
+.beibei-sub-tabs .ant-tabs-tab {
+  margin-right: 24px;
+}
+.beibei-header-sub-tabs .ant-tabs-tab:not(:first-child)::before,
+.beibei-sub-tabs .ant-tabs-tab:not(:first-child)::before {
+  content: '';
+  width: 1px;
+  height: 30px;
+  background-color: #d9d9d9;
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  margin-top: -18px;
+}
+.beibei-header-sub-tabs .ant-tabs-nav .ant-tabs-tab {
+  font-size: 16px;
+}
+.beibei-tabs .ant-tabs-nav-container {
+  overflow: initial;
+}
+.beibei-tabs.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-nav-wrap {
+  text-align: center;
+  overflow: initial;
+}
+.beibei-tabs.ant-tabs.ant-tabs-card
+  .ant-tabs-card-bar
+  .ant-tabs-nav-wrap
+  .ant-tabs-nav-scroll {
+  overflow: initial;
+}
+//dongdong
+.beibei-tabs.ant-tabs > .ant-tabs-nav .ant-tabs-nav-list,
+.beibei-tabs.ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-list {
+  margin: 0 auto;
+  box-shadow: @default-box-shadow;
+}
+//dongdong
+.beibei-tabs.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab,
+.beibei-tabs.ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab {
+  margin: 0;
+  color: @primary-color;
+  background-color: white;
+  border: none;
+}
+//dongdong
+.beibei-tabs.ant-tabs-card.ant-tabs-top
+  > .ant-tabs-nav
+  .ant-tabs-tab:not(:first-child)::before,
+.beibei-tabs.ant-tabs-card.ant-tabs-top
+  > div
+  > .ant-tabs-nav
+  .ant-tabs-tab:not(:first-child)::before {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 20px;
+  left: 0;
+  top: 50%;
+  margin-top: -10px;
+  background: #d9d9d9;
+}
+//dongdong
+.beibei-tabs.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab-active,
+.beibei-tabs.ant-tabs-card.ant-tabs-top
+  > div
+  > .ant-tabs-nav
+  .ant-tabs-tab-active {
+  color: white;
+  background-color: @primary-color;
+}
+.beibei-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: white;
+}
+//dongdong
+.beibei-tabs.ant-tabs-card.ant-tabs-top
+  > .ant-tabs-nav
+  .ant-tabs-tab.ant-tabs-tab-active::before,
+.beibei-tabs.ant-tabs-card.ant-tabs-top
+  > div
+  > .ant-tabs-nav
+  .ant-tabs-tab.ant-tabs-tab-active::before {
+  background: none;
+}
+
+//goast select
+.beibei-dark-transparent .ant-select-selection {
+  background: transparent;
+  border: 0px;
+  color: #fff;
+}
+.beibei-dark-transparent .ant-select-arrow {
+  color: #fff;
+}
+.beibei-content-single-w {
+  width: 1360px;
+}
+.beibei-content-w {
+  width: 1020px;
+}
+.beibei-content-sub-w {
+  width: 312px;
+}
+.winsese-content-left-root {
+  display: flex;
+  flex-direction: column;
+}
+.winsese-content-right-root {
+  display: flex;
+  flex-direction: column;
+}
+
+/*危险代码*/
+.ant-tooltip-inner {
+  background-color: @primary-color;
+}
+.ant-tooltip-placement-top .ant-tooltip-arrow,
+.ant-tooltip-placement-topLeft .ant-tooltip-arrow,
+.ant-tooltip-placement-topRight .ant-tooltip-arrow {
+  border-top-color: @primary-color;
+}
+/*危险代码 over*/
+
+/*dialog的修改*/
+.ant-modal-header {
+  padding: 8px 24px;
+}
+.ant-modal-title {
+  font-size: 14px;
+  height: 21px;
+  line-height: 21px;
+  color: #fff;
+}
+.ant-modal-close-x {
+  color: #fff;
+  height: 38px;
+  line-height: 38px;
+}
+.winsenese-white-dialog-close .ant-modal-close-x {
+  color: rgba(0, 0, 0, 0.45);
+}
+.beibei-text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.beibei-status-text-success,
+.beibei-status-text-error {
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  padding: 0px 22px;
+}
+.beibei-status-text-success {
+  background-color: #c5f1e2;
+}
+.beibei-status-text-error {
+  background-color: #ffbdbd;
+}
+// 对齐表单
+.ant-form-item-control {
+  line-height: 32px;
+}
+/****copy from color.less*****/
+/* 变色用到的样式 */
+.beibei-frame-contant-color {
+  background-color: @content-color;
+}
+.beibei-frame-bg {
+  background-color: @frame-color;
+}
+.beibei-frame-header-bg {
+  background-color: fade(@frame-color, 90%);
+}
+.beibei-breadcrum-border {
+  border-color: fade(@primary-color, 10%);
+}
+.beibei-breadcrum-bg {
+  background-color: fade(@primary-color, 10%);
+}
+.beibei-special-block-bg {
+  background-color: @special-block-bg;
+}
+.beibei-menu-item-select-color,
+.beibei-menu-item-select-color:hover {
+  color: @frame-active-color;
+}
+.beibei-menu-item-color:hover {
+  color: fade(@frame-active-color, 70%);
+}
+.beibei-primary-bg {
+  background-color: @primary-color;
+}
+.beibei-primary-bg-hover:hover {
+  background-color: #227bd4;
+}
+.beibei-primary-color {
+  color: @primary-color;
+}
+.beibei-primary-border {
+  border-color: @primary-color;
+}
+.beibei-primary-border-hover:hover {
+  border-color: @primary-color;
+}
+.beibei-after-primary-bg::after {
+  background-color: @primary-color;
+}
+.beibei-select-primary-bg-hover:hover {
+  background-color: #e6f6ff;
+}
+.beibei-after-primary-bg-hover:hover::after {
+  background-color: #227bd4; //color(~`colorPalette('@{primary-color}', 4) `);
+}
+.beibei-before-primary-bg::before {
+  background-color: @primary-color;
+}
+.beibei-item-select:hover {
+  background-color: #e6f6ff; //color(~`colorPalette('@{primary-color}', 1) `);
+}
+.beibei-text-color {
+  color: @text-color;
+}
+.beibei-text-color-2 {
+  color: @text-color-2;
+}
+//dongdong 2021-02-26 新增表格状态展示start------------------------
+.beibei-table-status-success,
+.beibei-table-status-error,
+.beibei-table-status-warning,
+.beibei-table-status-pending,
+.beibei-table-status-other {
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  padding: 0px 0px 0px 12px;
+  position: relative;
+}
+.beibei-table-status-success::after,
+.beibei-table-status-error::after,
+.beibei-table-status-warning::after,
+.beibei-table-status-pending::after,
+.beibei-table-status-other::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -3px;
+  background-color: #ccc;
+}
+.beibei-table-status-success::after {
+  background-color: #12be00;
+}
+.beibei-table-status-error::after {
+  background-color: #ff5500;
+}
+.beibei-table-status-warning::after {
+  background-color: #ffd61b;
+}
+.beibei-table-status-pending::after {
+  background-color: #005ec6;
+}
+//dongdong 2021-02-26 新增表格状态展示end--------------------------
+/* 变色用到的样式 end */
+
+//table
+.ant-table-thead > tr > th {
+  background-color: #ffffff; //dongdong
+}
+
+//下拉菜单
+//dongdong
+.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background-color: #e6f6ff; //color(~`colorPalette("@{frame-color}", 1)`)
+}
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  color: #ffffff;
+  background-color: @frame-color;
+  font-weight: normal;
+}
+
+//分页器
+.ant-pagination-prev:not(.ant-pagination-disabled):focus
+  .ant-pagination-item-link,
+.ant-pagination-next:not(.ant-pagination-disabled):focus
+  .ant-pagination-item-link,
+.ant-pagination-prev:not(.ant-pagination-disabled):hover
+  .ant-pagination-item-link,
+.ant-pagination-next:not(.ant-pagination-disabled):hover
+  .ant-pagination-item-link,
+.ant-pagination-item-link,
+.ant-pagination-item:not(.ant-pagination-disabled):focus,
+.ant-pagination-item:not(.ant-pagination-disabled):hover {
+  background: #e6f6ff; //color(~`colorPalette('@{primary-color}', 1) `);
+}
+.ant-pagination-item-link a,
+.ant-pagination-item a {
+  color: @primary-color;
+}
+.ant-pagination-item,
+.ant-pagination-prev:not(.ant-pagination-disabled) .ant-pagination-item-link,
+.ant-pagination-next:not(.ant-pagination-disabled) .ant-pagination-item-link {
+  border: 1px solid @primary-color;
+  color: @primary-color;
+}
+.ant-pagination-item-active a,
+.ant-pagination-item-active:focus a,
+.ant-pagination-item-active:hover a {
+  color: white;
+}
+.ant-pagination-item.ant-pagination-item-active,
+.ant-pagination-item.ant-pagination-item-active:focus,
+.ant-pagination-item.ant-pagination-item-active:hover {
+  background-color: @primary-color;
+  color: white;
+}
+//button
+.ant-btn:not(.ant-btn-primary):not([disabled]) {
+  color: @primary-color;
+  border-color: @primary-color;
+}
+.ant-calendar-selected-day .ant-calendar-date {
+  color: #fff;
+  background: @primary-color;
+}
+.ant-modal-content {
+  background-color: @content-color;
+}
+.ant-modal-header {
+  background-color: @primary-color;
+}
+.ant-modal-title {
+  color: #fff;
+}
+.ant-btn > span {
+  //dongdong
+  pointer-events: none;
+}
+//连级
+.ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled),
+.ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled):hover {
+  background-color: @primary-color;
+}
+//sms验证码
+.beibei-sms .ant-input-group-addon {
+  background-color: @primary-color;
+}
+.has-warning .ant-input:focus {
+  box-shadow: none;
+}
+.has-warning .ant-calendar-picker-open .ant-calendar-picker-input {
+  box-shadow: none;
+}
+.has-warning .ant-input-affix-wrapper .ant-input:focus {
+  box-shadow: none;
+}
+.has-warning .ant-select-open .ant-select-selection,
+.has-warning .ant-select-focused .ant-select-selection {
+  box-shadow: none;
+}
+.has-warning .ant-input-number-focused,
+.has-warning .ant-time-picker-input-focused,
+.has-warning .ant-input-number:focus,
+.has-warning .ant-time-picker-input:focus {
+  box-shadow: none;
+}
+.has-warning .ant-cascader-picker:focus .ant-cascader-input {
+  box-shadow: none;
+}
+.has-error .ant-input:focus {
+  box-shadow: none;
+}
+.has-error .ant-calendar-picker-open .ant-calendar-picker-input {
+  box-shadow: none;
+}
+.has-error .ant-input-affix-wrapper .ant-input:focus {
+  box-shadow: none;
+}
+
+//dongdong新增ant升级4.7.2版本样式+++++++++++++++++++++++++++++++++
+//日期控件
+.ant-picker-range .ant-picker-input > input {
+  text-align: center;
+}
+//Tabs
+.beibei-tabs.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab,
+.beibei-tabs.ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab {
+  margin: 0;
+  color: @primary-color; //btn-primary-bg
+  background-color: white;
+  border: none;
+}
+.beibei-tabs.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab-active,
+.beibei-tabs.ant-tabs-card.ant-tabs-top
+  > div
+  > .ant-tabs-nav
+  .ant-tabs-tab-active {
+  color: white;
+  background-color: @primary-color; //btn-primary-bg
+}
+//树形控件 dongdong 2021-02-26新增
+.beibei-tree.ant-tree .ant-tree-treenode {
+  padding: 0;
+  border-bottom: 1px solid #dde0e4;
+}
+.beibei-tree.ant-tree.ant-tree-directory .ant-tree-treenode::before {
+  bottom: 0px;
+}
+.beibei-tree.ant-tree .ant-tree-switcher {
+  width: 24px;
+  height: 44px;
+  line-height: 44px;
+}
+.beibei-tree.ant-tree .ant-tree-node-content-wrapper {
+  line-height: 44px;
+  padding: 0 4px 0 0;
+}
+.beibei-tree.ant-tree.ant-tree-directory .ant-tree-treenode:hover::before {
+  background: #e6f6ff; //color(~`colorPalette('@{primary-color}', 1) `)
+}
+.beibei-tree.ant-tree.ant-tree-directory
+  .ant-tree-treenode-selected:hover::before,
+.beibei-tree.ant-tree.ant-tree-directory .ant-tree-treenode-selected::before {
+  background: #e6f6ff; //color(~`colorPalette('@{primary-color}', 1) `)
+}
+.beibei-tree.ant-tree.ant-tree-directory
+  .ant-tree-treenode
+  .ant-tree-node-content-wrapper.ant-tree-node-selected {
+  color: @primary-color;
+  font-weight: 600;
+}
+.beibei-tree.ant-tree.ant-tree-directory
+  .ant-tree-treenode-selected
+  .ant-tree-switcher {
+  color: @primary-color;
+}
+/****copy from color.less end*****/
